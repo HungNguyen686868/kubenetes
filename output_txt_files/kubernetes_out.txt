@@ -1,37 +1,37 @@
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
    WARNING: Do not use the development server in a production environment.
    Use a production WSGI server instead.
  * Debug mode: on
  * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
  * Restarting with stat
  * Debugger is active!
- * Debugger PIN: 775-624-072
-127.0.0.1 - - [20/Oct/2022 08:56:03] "GET / HTTP/1.1" 200 -
-172.17.0.1 - - [20/Oct/2022 09:08:01] "GET / HTTP/1.1" 200 -
-[2022-10-20 09:08:52,378] INFO in app: JSON payload: 
+ * Debugger PIN: 129-516-115
+[2022-10-21 03:21:13,481] INFO in app: JSON payload: 
 {'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
-[2022-10-20 09:08:52,389] INFO in app: Inference payload DataFrame: 
+[2022-10-21 03:21:13,493] INFO in app: Inference payload DataFrame: 
    CHAS     RM    TAX  PTRATIO      B  LSTAT
 0     0  6.575  296.0     15.3  396.9   4.98
-[2022-10-20 09:08:52,399] INFO in app: Scaling Payload: 
+[2022-10-21 03:21:13,501] INFO in app: Scaling Payload: 
    CHAS     RM    TAX  PTRATIO      B  LSTAT
 0     0  6.575  296.0     15.3  396.9   4.98
-172.17.0.1 - - [20/Oct/2022 09:08:52] "POST /predict HTTP/1.1" 200 -
-172.17.0.1 - - [20/Oct/2022 09:10:29] "GET / HTTP/1.1" 200 -
-[2022-10-20 09:11:57,349] INFO in app: JSON payload: 
+[2022-10-21 03:21:13,505] INFO in app: Prediction: [20.35373177134412]
+172.17.0.1 - - [21/Oct/2022 03:21:13] "POST /predict HTTP/1.1" 200 -
+[2022-10-21 03:21:15,956] INFO in app: JSON payload: 
 {'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
-[2022-10-20 09:11:57,368] INFO in app: Inference payload DataFrame: 
+[2022-10-21 03:21:15,967] INFO in app: Inference payload DataFrame: 
    CHAS     RM    TAX  PTRATIO      B  LSTAT
 0     0  6.575  296.0     15.3  396.9   4.98
-[2022-10-20 09:11:57,386] INFO in app: Scaling Payload: 
+[2022-10-21 03:21:15,976] INFO in app: Scaling Payload: 
    CHAS     RM    TAX  PTRATIO      B  LSTAT
 0     0  6.575  296.0     15.3  396.9   4.98
-172.17.0.1 - - [20/Oct/2022 09:11:57] "POST /predict HTTP/1.1" 200 -
-[2022-10-20 09:11:59,822] INFO in app: JSON payload: 
-{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
-[2022-10-20 09:11:59,835] INFO in app: Inference payload DataFrame: 
-   CHAS     RM    TAX  PTRATIO      B  LSTAT
-0     0  6.575  296.0     15.3  396.9   4.98
-[2022-10-20 09:11:59,847] INFO in app: Scaling Payload: 
-   CHAS     RM    TAX  PTRATIO      B  LSTAT
-0     0  6.575  296.0     15.3  396.9   4.98
-172.17.0.1 - - [20/Oct/2022 09:11:59] "POST /predict HTTP/1.1" 200 -
+[2022-10-21 03:21:15,979] INFO in app: Prediction: [20.35373177134412]
+172.17.0.1 - - [21/Oct/2022 03:21:15] "POST /predict HTTP/1.1" 200
+
+--- port
+Port: 30080
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
